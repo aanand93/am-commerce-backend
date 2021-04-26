@@ -21,6 +21,7 @@ router.post('/signup', (req, res, next) => {
 				password: hash,
 			})
 		)
+
 		// create user with provided email and hashed password
 		.then((user) => User.create(user))
 		// send the new user object back with status 201, but `hashedPassword`
